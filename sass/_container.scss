@@ -1,0 +1,11 @@
+@use 'mixfun';
+
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--cream);
+    padding: 25px 0;
+    @include mixfun.media {
+        @include mixfun.center-content;
+    }
+}

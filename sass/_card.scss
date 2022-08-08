@@ -1,0 +1,52 @@
+@use 'mixfun';
+
+.card {
+    width: 90%;
+    max-width: 339px;
+    background-color: var(--white);
+    margin: 0 auto;
+    border-radius: 10px;
+    @include mixfun.media{
+        max-width: 625px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+
+    &__img {
+        width: 100%;
+        height: 237px;
+        background-image: url('../images/image-product-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 10px 10px 0 0;
+        @include mixfun.media {
+            background-image: url('../images/image-product-desktop.jpg');
+            background-size: 100% 100%;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+        }
+    }
+
+    &__texts {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+        @include mixfun.media {
+            padding: 30px 20px;
+        }
+    }
+
+    &__title {
+        font-family: var(--font-headings);
+        color: var(--very-dark-blue);
+        margin: 20px auto;
+        @include mixfun.media {
+            padding-right: 20px;
+        }
+    }
+
+    &__paragraph {
+        line-height: 1.5;
+    }
+}

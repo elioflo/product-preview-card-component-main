@@ -1,0 +1,18 @@
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 20px auto;
+
+    &__new {
+        font-family: var(--font-headings);
+        color: var(--dark-cyan);
+        font-size: 2rem;
+    }
+
+    &__old {
+        text-decoration: line-through;
+    }
+}

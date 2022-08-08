@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --font-headings: "Fraunces", serif;
+  --font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--dark-grayish-blue);
+}
+
+.container {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--cream);
+  padding: 25px 0;
+}
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  width: 90%;
+  max-width: 339px;
+  background-color: var(--white);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .card {
+    max-width: 625px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.card__img {
+  width: 100%;
+  height: 237px;
+  background-image: url("../images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px 10px 0 0;
+}
+@media (min-width: 768px) {
+  .card__img {
+    background-image: url("../images/image-product-desktop.jpg");
+    background-size: 100% 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+  }
+}
+.card__texts {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .card__texts {
+    padding: 30px 20px;
+  }
+}
+.card__title {
+  font-family: var(--font-headings);
+  color: var(--very-dark-blue);
+  margin: 20px auto;
+}
+@media (min-width: 768px) {
+  .card__title {
+    padding-right: 20px;
+  }
+}
+.card__paragraph {
+  line-height: 1.5;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 20px auto;
+}
+.prices__new {
+  font-family: var(--font-headings);
+  color: var(--dark-cyan);
+  font-size: 2rem;
+}
+.prices__old {
+  text-decoration: line-through;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 15px 0;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
